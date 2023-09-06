@@ -116,7 +116,9 @@
   height: 154px;
 }
 .story__article::after {
-  animation: spin 20s linear infinite;
+  animation: spin var(--rotation) linear infinite;
+  width: 188px;
+  height: 188px;
 }
 
 /* FADE IN TITRE H2 AU SCROLL */
@@ -132,20 +134,18 @@
 .studio {
   animation: animateTop 2s;
 }
-.studio__titre::before, .studio__titre::after {
-  animation: spin 20s linear infinite;
+.studio__titre::before {
+  animation: spin var(--rotation) linear infinite;
+  width: 203px;
+  height: 199px;
+}
+.studio__titre::after {
+  animation: spin var(--rotation) linear infinite;
+  width: 109px;
+  height: 109px;
 }
 .studio__texte p {
   animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
-}
-
-.oscars h3 {
-  background-image: url(./assets/images/orange_oscars_bg.png);
-  text-align: left;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  font-size: 2.8rem;
-  line-height: 52.5px;
 }
 
 .oscars {
@@ -156,44 +156,39 @@
   /*  margin: auto;*/
   margin-left: 11em;
 }
+.oscars__titre {
+  background-image: url(./assets/images/orange_oscars_bg.png);
+  text-align: left;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 2.8rem;
+  line-height: 52.5px;
+}
 
 /* 
 .oscars__logo{
   width: 30%;
     height: fit-content;
 }*/
-.site-footer::before, .site-footer::after {
-  animation: spin 20s linear infinite;
+.site-footer::before {
+  animation: spin var(--rotation) linear infinite;
+  width: 155px;
+  height: 154px;
+}
+.site-footer::after {
+  animation: spin var(--rotation) linear infinite;
+  width: 173px;
+  height: 169px;
 }
 .site-footer__liste::after {
-  animation: spin 20s linear infinite;
+  animation: spin var(--rotation) linear infinite;
+  width: 646px;
+  height: 646px;
 }
 
 /* STYLE GENERAL */
 .site-main {
   overflow: hidden;
-}
-
-/* KEYFRAMES */
-@keyframes animateBottom {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes animateTop {
-  0% {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

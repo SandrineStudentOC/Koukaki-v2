@@ -70,10 +70,7 @@ get_header();
             </div>
             </section>
 
-        <section class="oscars">
-            <h3>Fleurs d’oranger & chats errants <br>est nominé aux Oscars Short<br> Film Animated de 2022 !</h3>
-            <img class="oscars__logo" src="<?php echo get_theme_file_uri() . './assets/images/logo_oscars_transp.png'; ?> " alt="logo oscars">
-        </section>
+            <?php get_template_part( 'template-parts/section-oscars' ); ?>
 
     </main><!-- #main -->
 

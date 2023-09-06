@@ -4,8 +4,15 @@
     animation: animateTop 2s;
 
     &__titre{
-        &::before, &::after{
-            animation: spin 20s linear infinite ;
+        &::before{
+            animation: spin var(--rotation) linear infinite ;
+            width: 203px;
+            height: 199px;
+        }
+        &::after{
+            animation: spin var(--rotation) linear infinite ;
+            width: 109px;
+            height: 109px;
         }
     }
  
