@@ -148,6 +148,15 @@
   animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
 }
 
+/* FADE IN TITRE H2 AU SCROLL */
+.studio__titre__animation {
+  animation: animateTitre 1s ease-in-out;
+}
+
+.studio-span {
+  display: block;
+}
+
 .oscars {
   display: flex;
   justify-content: space-between;
