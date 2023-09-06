@@ -1,0 +1,29 @@
+/* FADE IN + LOGO FLOTTEMENT*/
+
+.banner{
+    background-image: none;
+    position: relative;
+
+    &__logo{
+        animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite ; // Possible de mettre plusieurs animations à la suite
+    } 
+
+    &__background{
+        position: absolute;
+        width: 100% !important;
+        z-index: -2;
+        animation: animateBottom 2s;
+        margin-top: 0px !important;
+    } 
+
+    &__video {
+        animation: animateBottom 2s ;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        }
+}

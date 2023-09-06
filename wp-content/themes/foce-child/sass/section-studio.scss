@@ -1,0 +1,16 @@
+/* FADE IN ET ROTATION DES FLEURS */
+
+.studio {
+    animation: animateTop 2s;
+
+    &__titre{
+        &::before, &::after{
+            animation: spin 20s linear infinite ;
+        }
+    }
+ 
+    &__texte p {
+     animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
+    }
+ 
+} 

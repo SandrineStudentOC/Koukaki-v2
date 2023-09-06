@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+/* ANIMATION FADE IN */
+@keyframes animateBottom {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animateTop {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* ANIMATION LOGO */
+@keyframes animateTopLogo {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* ANIMATION FLEURS */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ANIMATION FADE IN TITRES H2 */
+@keyframes animateTitre {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* FADE IN + LOGO FLOTTEMENT*/
+.banner {
+  background-image: none;
+  position: relative;
+}
+.banner__logo {
+  animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite;
+}
+.banner__background {
+  position: absolute;
+  width: 100% !important;
+  z-index: -2;
+  animation: animateBottom 2s;
+  margin-top: 0px !important;
+}
+.banner__video {
+  animation: animateBottom 2s;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* FADE IN */
+.story {
+  animation: animateTop 2s;
+}
+.story__article p {
+  animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+}
+.story__place p {
+  animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+}
+
+/* ROTATION FLEURS */
+.story__titre::after {
+  animation: spin var(--rotation) linear infinite;
+  /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
+  width: 155px;
+  height: 154px;
+}
+.story__article::after {
+  animation: spin 20s linear infinite;
+}
+
+/* FADE IN TITRE H2 AU SCROLL */
+.story__titre__animation {
+  animation: animateTitre 1s ease-in-out;
+}
+
+.story-span {
+  display: block;
+}
+
+/* FADE IN ET ROTATION DES FLEURS */
+.studio {
+  animation: animateTop 2s;
+}
+.studio__titre::before, .studio__titre::after {
+  animation: spin 20s linear infinite;
+}
+.studio__texte p {
+  animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
+}
+
+.oscars h3 {
+  background-image: url(./assets/images/orange_oscars_bg.png);
+  text-align: left;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 2.8rem;
+  line-height: 52.5px;
+}
+
+.oscars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  /*  margin: auto;*/
+  margin-left: 11em;
+}
+
+/* 
+.oscars__logo{
+  width: 30%;
+    height: fit-content;
+}*/
+.site-footer::before, .site-footer::after {
+  animation: spin 20s linear infinite;
+}
+.site-footer__liste::after {
+  animation: spin 20s linear infinite;
+}
+
+/* STYLE GENERAL */
+.site-main {
+  overflow: hidden;
+}
+
+/* KEYFRAMES */
+@keyframes animateBottom {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animateTop {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

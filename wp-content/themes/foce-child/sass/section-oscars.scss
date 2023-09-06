@@ -1,0 +1,22 @@
+.oscars h3{
+    background-image: url(./assets/images/orange_oscars_bg.png);
+    text-align: left;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 2.8rem;
+    line-height: 52.5px;
+}
+
+.oscars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+   /*  margin: auto;*/
+    margin-left: 11em;
+}
+ /* 
+.oscars__logo{
+  width: 30%;
+    height: fit-content;
+}*/

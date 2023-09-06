@@ -1,0 +1,49 @@
+/* FADE IN */
+
+.story {
+    animation: animateTop 2s;
+
+        &__article p {
+            animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+        }
+
+        &__place p {
+            animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+        }
+}
+
+
+
+/* ROTATION FLEURS */
+
+    .story{
+        &__titre{
+            &::after{
+                animation: spin var(--rotation) linear infinite ;
+                /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
+                width: 155px;
+                height: 154px;
+            }
+        }
+        &__article{
+            &::after{
+                animation: spin 20s linear infinite;   
+            }
+        }
+    }
+    
+
+/* FADE IN TITRE H2 AU SCROLL */
+
+    .story{
+        &__titre  {
+            &__animation{
+            animation: animateTitre 1s ease-in-out;
+            }
+        }
+      }
+
+
+     .story-span{
+        display: block; // Permet d'appliquer l'animation au span
+     }

@@ -1,0 +1,12 @@
+
+    .site-footer{
+        &::before, &::after {
+            animation: spin 20s linear infinite ;
+        }
+            &__liste{
+                &::after{
+                animation: spin 20s linear infinite ;
+                }
+            }
+        
+      }

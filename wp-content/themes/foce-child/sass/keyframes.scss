@@ -1,0 +1,80 @@
+/* ANIMATION FADE IN */
+
+@keyframes animateBottom {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+ }
+
+ @keyframes animateTop {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+ }
+
+/* ANIMATION LOGO */
+
+@keyframes animateTopLogo {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+ }
+
+ @keyframes floating {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+
+    }
+
+    100%{
+        transform: translateY(0px);
+
+    }
+ }
+
+/* ANIMATION FLEURS */
+
+ @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}   
+
+/* ANIMATION FADE IN TITRES H2 */
+
+@keyframes animateTitre {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+ }
