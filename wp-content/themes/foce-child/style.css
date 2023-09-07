@@ -97,6 +97,12 @@
   z-index: -1;
 }
 
+/* MEDIA QUERIES */
+@media only screen and (max-width: 920px) {
+  .banner__video {
+    display: none;
+  }
+}
 /* FADE IN */
 .story {
   animation: animateTop 2s;
@@ -155,6 +161,24 @@
 
 .studio-span {
   display: block;
+}
+
+#place {
+  background-image: url(./assets/images/Studio_Koukaki-image_place.png) !important;
+  position: relative;
+}
+
+.story__place__big-cloud {
+  filter: blur(0.8rem);
+  position: absolute;
+  right: 80px;
+  top: 80px;
+}
+.story__place__little-cloud {
+  filter: blur(0.8rem);
+  position: absolute;
+  right: 490px;
+  top: 250px;
 }
 
 .oscars {

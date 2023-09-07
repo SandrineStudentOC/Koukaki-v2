@@ -52,6 +52,8 @@ get_header();
                 </div>
             </article>
             <article id="place" class="story__place">
+                <img class="story__place__big-cloud" src="<?php echo get_theme_file_uri() . './assets/images/big_cloud.png'; ?> " alt="illustration d'un nuage" data-bottom-top="transform:translate3d(0px, 0, 0)" data-top="transform:translate3d(-300px, 0px, 0)">
+                <img class="story__place__little-cloud" src="<?php echo get_theme_file_uri() . './assets/images/little_cloud.png'; ?> " alt="illustration d'un nuage" data-bottom-top="transform:translate3d(0px, 0, 0)" data-top="transform:translate3d(-300px, 0px, 0)">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>

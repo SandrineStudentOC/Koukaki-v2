@@ -1,0 +1,19 @@
+#place {
+    background-image: url(./assets/images/Studio_Koukaki-image_place.png) !important;
+    position: relative;
+}
+
+.story__place{
+    &__big-cloud{
+        filter: blur(0.8rem); // effet de flou gaussien au nuage
+        position: absolute;
+        right: 80px;
+        top: 80px;
+    }
+    &__little-cloud{
+        filter: blur(0.8rem); // effet de flou gaussien au nuage
+        position: absolute;
+        right: 490px;
+        top: 250px;
+    }
+}

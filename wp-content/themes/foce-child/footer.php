@@ -22,5 +22,12 @@
 
 <?php wp_footer(); ?>
 
+ <!-- Ajout script pour effet parallax Skrollr.js -->
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+ <script>	
+     var s = skrollr.init();
+</script>
+
 </body>
 </html>
