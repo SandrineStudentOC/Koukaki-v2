@@ -37,15 +37,12 @@
 
 /* FADE IN TITRE H2 AU SCROLL */
 
-    .story{
-        &__titre  {
-            &__animation{
-            animation: animateTitre 1s ease-in-out;
-            }
-        }
-      }
-
-
-     .story-span{
+   .story-span{
         display: block; // Permet d'appliquer l'animation au span
+        opacity: 0;
+        &__animation{
+            animation: animateTitre 1s ease-in-out both;
+        }
      }
+
+

@@ -24,15 +24,10 @@
 
 /* FADE IN TITRE H2 AU SCROLL */
 
-.studio{
-    &__titre  {
-        &__animation{
-        animation: animateTitre 1s ease-in-out;
-        }
-    }
-  }
-
-
- .studio-span{
+.studio-span{
     display: block; // Permet d'appliquer l'animation au span
+    opacity: 0;
+    &__animation{
+        animation: animateTitre 1s ease-in-out both;
+    }
  }

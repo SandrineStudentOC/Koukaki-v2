@@ -4,10 +4,10 @@ const observerStory = new IntersectionObserver(entries => {
         const titre = entry.target.querySelector('.story-span')
 
         if (entry.isIntersecting ) { 
-            titre.classList.add ('story__titre__animation');
+            titre.classList.add ('story-span__animation');
             return;
         }
-        titre.classList.remove('story__titre__animation')
+        titre.classList.remove('story-span__animation')
     }); 
 
 },{
@@ -24,10 +24,10 @@ const observerStudio = new IntersectionObserver(entries => {
       const titre = entry.target.querySelector('.studio-span')
 
       if (entry.isIntersecting ) { 
-          titre.classList.add ('studio__titre__animation');
+          titre.classList.add ('studio-span__animation');
           return;
       }
-      titre.classList.remove('studio__titre__animation')
+      titre.classList.remove('studio-span__animation')
   }); 
 
 },{
