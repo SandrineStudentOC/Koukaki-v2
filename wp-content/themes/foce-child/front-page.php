@@ -15,42 +15,10 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            <?php
-            $args = array(
-                'post_type' => 'characters',
-                'posts_per_page' => -1,
-                'meta_key'  => '_main_char_field',
-                'orderby'   => 'meta_value_num',
+           
+            <?php get_template_part( 'template-parts/section-characters' ); ?>
 
-            );
-            $characters_query = new WP_Query($args);
-            ?>
-            <article id="characters">
-                <div class="main-character">
-                    <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
-                </div>
-                <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
-                </div>
-            </article>
+
             <article id="place" class="story__place">
                 <img class="story__place__big-cloud" src="<?php echo get_theme_file_uri() . './assets/images/big_cloud.png'; ?> " alt="illustration d'un nuage" data-bottom-top="transform:translate3d(0px, 0, 0)" data-top="transform:translate3d(-300px, 0px, 0)">
                 <img class="story__place__little-cloud" src="<?php echo get_theme_file_uri() . './assets/images/little_cloud.png'; ?> " alt="illustration d'un nuage" data-bottom-top="transform:translate3d(0px, 0, 0)" data-top="transform:translate3d(-300px, 0px, 0)">
@@ -73,6 +41,7 @@ get_header();
             </section>
 
             <?php get_template_part( 'template-parts/section-oscars' ); ?>
+
 
     </main><!-- #main -->
 

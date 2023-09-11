@@ -1,7 +1,7 @@
 /* FADE IN */
 
 .story {
-    animation: animateTop 2s;
+   animation: animateTop 2s;
 
         &__article p {
             animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */

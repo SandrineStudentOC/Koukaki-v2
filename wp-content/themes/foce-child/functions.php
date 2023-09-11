@@ -2,6 +2,13 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+
+    // Enregistrer la feuille de style de Swiper
+    wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css' );
+
+    // Enregistrer le script de Swiper - Avant la feuille js du thème !!!
+    wp_enqueue_script( 'swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array(), null, true );
+
     // importer feuille js depuis le thème enfant utiliser "get_stylesheet_directory_uri()"
     wp_enqueue_script( 'foce-child-script', get_stylesheet_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
 
