@@ -71,7 +71,6 @@ window.addEventListener("scroll", () => {
 });*/
 
 // Slide Swiper Coverflow
-
 const swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   effect: "coverflow",
@@ -86,8 +85,6 @@ const swiper = new Swiper(".swiper-container", {
     modifier: 1,
     slideShadows: false,
   },
-
-
 });
 
 
