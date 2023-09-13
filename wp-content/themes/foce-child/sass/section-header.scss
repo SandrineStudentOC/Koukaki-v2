@@ -31,15 +31,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+    display: none;
 }
 
 .nav__liste li {
     list-style: none;
+    
 }
 
 .nav__liste li a{
     text-decoration: none;
     font-size: 4rem;
+}
+
+.nav__liste li a:hover{
+    text-decoration: none;
+    font-size: 4rem;
+    text-shadow: #FF5C00 0 0 14px;
+    color: #000;
+}
+
+.nav__liste li a:focus{
+    color: #000;
+}
+
+.nav__liste li a:active{
+    color: #000;
+}
+
+.lien-koukaki{
+    font-size: 1rem !important;
+    margin-top: 100px;
+    display: block;
 }
 
 #icons{
@@ -53,6 +78,12 @@
     content: "\2630";
 }
 
+// Quand la classe active est ajouté avec js affiche la croix et le menu
+
 .active #icons::before{
     content: "\2715";
+}
+
+.active .nav__liste{
+    display: flex; // annule le display:none de <ul>
 }

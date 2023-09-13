@@ -74,17 +74,32 @@ window.addEventListener("scroll", () => {
 const swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   effect: "coverflow",
-  //loop: true,
   grabCursor: true,
   slidesPerView: "auto",
   //slidesPerView: 3,
   coverflowEffect: {
-    rotate: 50,
+    rotate: 70,
     stretch: 0,
     depth: 100,
     modifier: 1,
     slideShadows: false,
   },
+  autoplay: {
+    delay: 2000,
+  },
+  //loop: true,
 });
 
+// Ouverture du menu burger au clic sur la croix
+const navMenu = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav__liste li");
 
+icons.addEventListener("click",()=> {
+  navMenu.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
