@@ -231,21 +231,22 @@
   animation: animateTitre 1s ease-in-out both;
 }
 
-.story #characters {
+.story #character {
+  margin: 6em;
+  display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .swiper-container {
+  max-width: 1440px;
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 380px;
-  height: 380px;
 }
 
 /*
@@ -261,6 +262,15 @@
   margin-top: 0;
 }
 
+.story #character h3 {
+  background-image: url(./assets/images/orange_characters_bg.png);
+}
+
+@media only screen and (max-width: 780px) {
+  .swiper-container {
+    max-width: 900px;
+  }
+}
 /* FADE IN ET ROTATION DES FLEURS */
 .studio {
   animation: animateTop 2s;
@@ -323,11 +333,6 @@
   line-height: 150%;
 }
 
-/* 
-.oscars__logo{
-  width: 30%;
-    height: fit-content;
-}*/
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1130px) {
   .oscars {
@@ -340,13 +345,6 @@
     line-height: 150%;
   }
 }
-/*
-@media only screen and (max-width: 1037px)  {
-
-    .oscars__titre { 
-        font-size: 2.3rem;
-    }
-}*/
 .site-footer::before {
   animation: spin var(--rotation) linear infinite;
   width: 155px;

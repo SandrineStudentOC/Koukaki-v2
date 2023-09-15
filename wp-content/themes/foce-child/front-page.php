@@ -4,10 +4,10 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner">
+    <section class="banner">
             <!-- code ajouté / séparer logo du background pour animation -->
             <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-            <video class="banner__video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>"><source src="<?php echo get_theme_file_uri() .'./assets/video/koukaki_header_video.mp4';?>" type="video/mp4"></video>
+            <video class="banner__video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>"><source src="<?php echo get_theme_file_uri() .'./assets/video/koukaki_header_video.mp4';?>" type="video/mp4"  ></video>
            <img class="banner__background" src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " alt="background Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story">

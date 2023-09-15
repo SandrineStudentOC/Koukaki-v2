@@ -15,7 +15,7 @@ const observerStory = new IntersectionObserver(entries => {
 }
 );
 
-observerStory.observe(document.querySelector(".story__titre"))
+observerStory.observe(document.querySelector(".story__titre"));
 
 
 // on crée l'observer pour titre studio
@@ -35,10 +35,25 @@ const observerStudio = new IntersectionObserver(entries => {
 }
 );
 
-observerStudio.observe(document.querySelector(".studio__titre"))
+observerStudio.observe(document.querySelector(".studio__titre"));
+
 
 
 // accélération des fleurs au scroll
+
+
+const element = document.querySelector('.story__titre::after'); // Sélectionne l'élément animé
+
+window.addEventListener('scroll', function() {
+  const scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Calcule le pourcentage de défilement
+
+  const animationSpeed = 5 - scroll * 4; // Ajuste la vitesse de l'animation en fonction du défilement
+
+  element.style.animationDuration = `${animationSpeed}s`; // Applique la nouvelle durée de l'animation
+});
+
+
+
 
 const root = document.documentElement;
 let isScrolling = false;
@@ -74,20 +89,22 @@ window.addEventListener("scroll", () => {
 const swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   effect: "coverflow",
-  grabCursor: true,
-  slidesPerView: "auto",
-  //slidesPerView: 3,
+   grabCursor: true,
+  //slidesPerView: "auto",
+  slidesPerView: 3,
+ // spaceBetween: 30,
   coverflowEffect: {
-    rotate: 70,
+    rotate: 80,
     stretch: 0,
     depth: 100,
     modifier: 1,
     slideShadows: false,
   },
-  autoplay: {
+    autoplay: {
     delay: 2000,
   },
-  //loop: true,
+
+ loop: true,
 });
 
 // Ouverture du menu burger au clic sur la croix

@@ -4,6 +4,7 @@
     background-image: none;
     position: relative;
 
+
     &__logo{
         animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite ; // Possible de mettre plusieurs animations à la suite
     } 
@@ -30,8 +31,11 @@
         z-index: -1;
         width: 100%;
         height: 100%;
+ 
         }
 }
+
+
 
 /* MEDIA QUERIES */
 

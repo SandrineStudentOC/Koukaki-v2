@@ -1,4 +1,4 @@
-<article id="characters">
+<article id="character">
     <h3>Les personnages</h3>
 
     <!-- Slider main container -->
