@@ -164,7 +164,9 @@
   position: relative;
 }
 .banner__logo {
-  animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite;
+  margin-top: 0 !important;
+  width: 680px !important;
+  top: 119px;
 }
 .banner__background {
   position: absolute;

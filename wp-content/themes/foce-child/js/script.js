@@ -41,7 +41,7 @@ observerStudio.observe(document.querySelector(".studio__titre"));
 
 // accélération des fleurs au scroll
 
-
+/*
 const element = document.querySelector('.story__titre::after'); // Sélectionne l'élément animé
 
 window.addEventListener('scroll', function() {
@@ -69,8 +69,8 @@ window.addEventListener("scroll", () => {
     }, 600);
   }
 });
+*/
 
-/*
 const root = document.documentElement;
 
 window.addEventListener("scroll", () => {
@@ -83,7 +83,7 @@ window.addEventListener("scroll", () => {
       root.style.setProperty("--rotation", "20s");
     }
   }, 600);
-});*/
+});
 
 // Slide Swiper Coverflow
 const swiper = new Swiper(".swiper-container", {

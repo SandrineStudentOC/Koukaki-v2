@@ -6,8 +6,13 @@
 
 
     &__logo{
-        animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite ; // Possible de mettre plusieurs animations à la suite
+       // animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite ; // Possible de mettre plusieurs animations à la suite
+        margin-top: 0 !important;
+        width: 680px !important;
+        top: 119px;
+       // position: fixed;
     } 
+
 
     &__background{
         position: absolute;
