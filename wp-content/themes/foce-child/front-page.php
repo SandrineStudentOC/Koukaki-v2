@@ -12,7 +12,7 @@ get_header();
             <video class="banner__video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>"><source src="<?php echo get_theme_file_uri() .'./assets/video/koukaki_header_video.mp4';?>" type="video/mp4"  ></video>
            <img class="banner__background" src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " alt="background Fleurs d'oranger & chats errants">
         </section>
-        <section id="#story" class="story">
+        <section id="story" class="story">
             <h2 class="story__titre"><span class="story-span">L'histoire<span></h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>

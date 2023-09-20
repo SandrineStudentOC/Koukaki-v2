@@ -32,7 +32,7 @@
             <ul class="nav__liste">
                 <li><a href="#"><img class="nav__liste__logo" src="<?php echo get_theme_file_uri() . './assets/images/logo-menu-koukaki.png'; ?> " alt="logo Fleurs d'oranger & chats errants"></a></li>
                 <li class="nav__liste__story"><a class="animation_menu" href="#story">Histoire</a></li>
-                <li class="nav__liste__characters"><a class="animation_menu" href="#characters">Personnages</a></li>
+                <li class="nav__liste__characters"><a class="animation_menu" href="#character">Personnages</a></li>
                 <li class="nav__liste__place"><a class="animation_menu" href="#place">Lieu</a></li>
                 <li class="nav__liste__studio"><a class="animation_menu" href="#studio">Studio Koukaki</a></li>
                 <li ><a class="lien-koukaki" href="#">STUDIO KOUKAKI</a></li>
