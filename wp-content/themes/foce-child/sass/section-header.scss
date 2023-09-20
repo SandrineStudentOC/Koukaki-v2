@@ -10,11 +10,12 @@
 .nav__titre{
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 1.4em;
 }
 
 .nav__titre a{
     text-decoration: none;
-    font-size: 21px;
+    
 }
 
 .nav__liste {
@@ -34,7 +35,97 @@
     justify-content: space-evenly;
     padding-bottom: 80px;
     display: none;
+    overflow: hidden;
+    animation: animateBottom 1.2s;
+    z-index: -1;
 }
+
+.animation_menu{
+    animation: animateTitre 1.5s ease-in-out 1s both;
+    display: block;
+}
+
+.nav__liste__story{
+    &::before{
+        content: url(./assets/images/menu/orchid.png);
+        position: absolute;
+        width: 173px;
+        height: 169px;
+        left: -2em;
+        top: 7em;
+        animation: spin 20s linear infinite ;
+    }
+    &::after{
+        content: url(./assets/images/menu/Sunflower.png);
+        position: absolute;
+        width: 155px;
+        height: 154px;
+        right: 10em;
+        top: 12em;
+        animation: spin 20s linear infinite ;
+    }
+
+}
+
+.nav__liste__characters{
+    &::before{
+        content: url(./assets/images/menu/cat_violet.png);
+        position: absolute;
+        top: 13em;
+        left: 21em;
+        animation: floating 6s ease-in-out infinite;
+    }
+    &::after{
+        content: url(./assets/images/menu/cat_noir.png);
+        position: absolute;
+        top: 32em;
+        right: 14em;
+        animation: floating 6s ease-in-out infinite;
+    }
+
+}
+
+.nav__liste__place{
+    &::before{
+        content: url(./assets/images/menu/Flower_petit.png);
+        position: absolute;
+        top: 33em;
+        left: 15em;
+        animation: spin 20s linear infinite ;
+    }
+    &::after{
+        content: url(./assets/images/menu/Random_Flower_petit.png);
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        top: 28em;
+        right: -2em;
+        animation: spin 20s linear infinite ;
+    }
+
+}
+
+.nav__liste__studio{
+    &::before{
+        content: url(./assets/images/menu/cat_orange.png);
+        position: absolute;
+        top: 50em;
+        left: 5em;
+        animation: floating 6s ease-in-out infinite;
+    }
+    &::after{
+        content: url(./assets/images/menu/Hibiscus_menu.png);
+        position: absolute;
+        width: 646px;
+        height: 646px;
+        top: 40em;
+        right: -24em;
+        animation: spin 20s linear infinite ;
+    }
+
+}
+
+
 
 .nav__liste li {
     list-style: none;
@@ -70,7 +161,7 @@
 #icons{
     cursor: pointer;
     position: absolute;
-    right: 132px;
+    right: 9%;
     font-size: 30px;
 }
 
@@ -78,12 +169,43 @@
     content: "\2630";
 }
 
-// Quand la classe active est ajouté avec js affiche la croix et le menu
+// Quand la classe "active" est ajoutée avec js , cela affiche la croix sur le menu
 
 .active #icons::before{
     content: "\2715";
 }
 
 .active .nav__liste{
-    display: flex; // annule le display:none de <ul>
+    display: flex; // annule le display:none de <ul> et affiche le menu
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 500px)  {
+  
+    #myNav {
+
+        justify-content:flex-start ;
+        padding-left: 30px;
+        font-size: 0.9em;
+
+    }
+}
+
+@media only screen and (max-width: 400px)  {
+  
+    .nav__titre {
+        display: none;
+    }
+
+    #icons {
+        position: static;
+    }
+
+    #myNav {
+
+        justify-content:center ;
+        padding-left: 0px;
+
+    }
 }

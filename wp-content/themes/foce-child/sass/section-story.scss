@@ -19,7 +19,7 @@
     .story{
         &__titre{
             &::after{
-                animation: spin var(--rotation) linear infinite ; // ajout d'une variable pour modifier la vitesse de rotation au scroll en js
+                animation: spin var(--rotation) linear  infinite ; // ajout d'une variable pour modifier la vitesse de rotation au scroll en js
                 /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
                 width: 155px;
                 height: 154px;

@@ -7,7 +7,7 @@ get_header();
     <section class="banner">
             <!-- code ajouté / séparer logo du background pour animation -->
             <div class="banner__logo">
-                <img class="banner__logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"  data-0="transform:translateY(0px)" data-300="transform:translateY(205px)" >
+                <img class="banner__logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"  data-0="transform:translateY(0px)" data-400="transform:translateY(190px)" >
             </div>
             <video class="banner__video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>"><source src="<?php echo get_theme_file_uri() .'./assets/video/koukaki_header_video.mp4';?>" type="video/mp4"  ></video>
            <img class="banner__background" src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " alt="background Fleurs d'oranger & chats errants">

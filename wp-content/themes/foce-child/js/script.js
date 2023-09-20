@@ -41,20 +41,6 @@ observerStudio.observe(document.querySelector(".studio__titre"));
 
 // accélération des fleurs au scroll
 
-/*
-const element = document.querySelector('.story__titre::after'); // Sélectionne l'élément animé
-
-window.addEventListener('scroll', function() {
-  const scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Calcule le pourcentage de défilement
-
-  const animationSpeed = 5 - scroll * 4; // Ajuste la vitesse de l'animation en fonction du défilement
-
-  element.style.animationDuration = `${animationSpeed}s`; // Applique la nouvelle durée de l'animation
-});
-
-
-
-
 const root = document.documentElement;
 let isScrolling = false;
 
@@ -69,8 +55,8 @@ window.addEventListener("scroll", () => {
     }, 600);
   }
 });
-*/
 
+/*
 const root = document.documentElement;
 
 window.addEventListener("scroll", () => {
@@ -84,6 +70,25 @@ window.addEventListener("scroll", () => {
     }
   }, 600);
 });
+*/
+/*
+const element = document.querySelector('.story__titre::after'); // Sélectionne l'élément animé
+
+window.addEventListener('scroll', function() {
+  const scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Calcule le pourcentage de défilement
+
+  const animationSpeed = 5 - scroll * 4; // Ajuste la vitesse de l'animation en fonction du défilement
+
+  element.style.animationDuration = `${animationSpeed}s`; // Applique la nouvelle durée de l'animation
+});
+
+*/
+
+
+
+
+
+
 
 // Slide Swiper Coverflow
 const swiper = new Swiper(".swiper-container", {

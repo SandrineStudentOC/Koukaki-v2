@@ -4,6 +4,9 @@
     animation: animateTop 2s;
 
     &__titre{
+        display: flex; //test
+        flex-direction: row; //test
+        justify-content: center; //test
         &::before{
             animation: spin var(--rotation) linear infinite ;
             width: 203px;
