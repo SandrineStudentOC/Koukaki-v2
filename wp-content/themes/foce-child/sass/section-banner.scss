@@ -9,11 +9,14 @@
         margin-top: 0 !important;
         width: 680px !important;
         top: 119px;
+        display: flex;
+        justify-content: center;
         animation: animateTopLogo 2s, floating 6s ease-in-out 2s infinite ; // Possible de mettre plusieurs animations à la suite
 
         &__img{
 
-            width: 680px !important;
+           // width: 680px !important;
+           width: 100% !important;
        }
     } 
 
@@ -61,4 +64,26 @@
     .banner__background{
         display: block;
     }
+
+    .banner__logo__img{
+        width: 85% !important;
+    }
 }
+
+
+@media only screen and (max-width: 750px)  {
+
+    .banner__logo__img{
+        transform: initial !important; // Permet de stopper le parallaxe de la bannière 
+    }
+}
+
+/*
+@media only screen and (max-width: 400px)  {
+
+    .banner{
+        min-height: 500px;
+    }
+
+}
+*/

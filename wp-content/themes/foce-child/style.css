@@ -266,10 +266,12 @@
   margin-top: 0 !important;
   width: 680px !important;
   top: 119px;
+  display: flex;
+  justify-content: center;
   animation: animateTopLogo 2s, floating 6s ease-in-out 2s infinite;
 }
 .banner__logo__img {
-  width: 680px !important;
+  width: 100% !important;
 }
 .banner__background {
   position: absolute;
@@ -306,7 +308,24 @@
   .banner__background {
     display: block;
   }
+  .banner__logo__img {
+    width: 85% !important;
+  }
 }
+@media only screen and (max-width: 750px) {
+  .banner__logo__img {
+    transform: initial !important;
+  }
+}
+/*
+@media only screen and (max-width: 400px)  {
+
+    .banner{
+        min-height: 500px;
+    }
+
+}
+*/
 /* FADE IN */
 .story {
   animation: animateTop 2s;
@@ -479,6 +498,20 @@
 /* STYLE GENERAL */
 .site-main {
   overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 400px) {
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
