@@ -1,5 +1,9 @@
+
+
+// FADE IN TITRES
+
 // on crée l'observer pour titre histoire
-const observerStory = new IntersectionObserver(entries => {
+const observerStorytitle = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const titre = entry.target.querySelector('.story-span')
 
@@ -11,11 +15,11 @@ const observerStory = new IntersectionObserver(entries => {
     }); 
 
 },{
-    threshold: 0.7
+    threshold: 0.9
 }
 );
 
-observerStory.observe(document.querySelector(".story__titre"));
+observerStorytitle.observe(document.querySelector(".story__titre"));
 
 
 // on crée l'observer pour titre studio
@@ -31,12 +35,36 @@ const observerStudio = new IntersectionObserver(entries => {
   }); 
 
 },{
-  threshold: 0.7
+  threshold: 0.9
 }
 );
 
 observerStudio.observe(document.querySelector(".studio__titre"));
 
+// FADE IN SECTIONS
+
+// on crée l'observer pour section story et studio
+
+const ratio = .15
+const options = {
+  root: null,
+  rootMargin: '0px' ,
+  threshold: ratio
+}
+
+const handleIntersect = function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > ratio) {
+      entry.target.classList.add ('animateSection-visible')
+      observer.unobserve(entry.target)
+    }
+  })
+}
+
+const observer = new IntersectionObserver (handleIntersect, options)
+document.querySelectorAll('.animateSection').forEach(function (r) {
+  observer.observe(r)
+})
 
 
 // accélération des fleurs au scroll
@@ -57,21 +85,6 @@ window.addEventListener("scroll", () => {
 });
 
 /*
-const root = document.documentElement;
-
-window.addEventListener("scroll", () => {
-  var vertical = -1;
-  setInterval(function () {
-    if (window.scrollY !== vertical) {
-      vertical = window.scrollY;
-      root.style.setProperty("--rotation", "5s");
-    } else {
-      root.style.setProperty("--rotation", "20s");
-    }
-  }, 600);
-});
-*/
-/*
 const element = document.querySelector('.story__titre::after'); // Sélectionne l'élément animé
 
 window.addEventListener('scroll', function() {
@@ -81,23 +94,15 @@ window.addEventListener('scroll', function() {
 
   element.style.animationDuration = `${animationSpeed}s`; // Applique la nouvelle durée de l'animation
 });
-
 */
 
-
-
-
-
-
-
 // Slide Swiper Coverflow
+
 const swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   effect: "coverflow",
    grabCursor: true,
-  //slidesPerView: "auto",
   slidesPerView: 3,
- // spaceBetween: 30,
   coverflowEffect: {
     rotate: 80,
     stretch: 0,
@@ -105,14 +110,15 @@ const swiper = new Swiper(".swiper-container", {
     modifier: 1,
     slideShadows: false,
   },
-    autoplay: {
-    delay: 2000,
+   autoplay: {
+   delay: 500,
   },
-
- loop: true,
+  loop: true,
 });
 
+
 // Ouverture du menu burger au clic sur la croix
+
 const navMenu = document.querySelector(".nav");
 const links = document.querySelectorAll(".nav__liste li");
 

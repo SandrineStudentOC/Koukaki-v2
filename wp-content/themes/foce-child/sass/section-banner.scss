@@ -19,18 +19,20 @@
         justify-content: center;
         animation: animateTopLogo 2s, floating 6s ease-in-out 2s infinite ; // Possible de mettre plusieurs animations à la suite
 
+        @media (max-width: 770px)  {
+            animation: none;
+        }
+
         &__img{
 
            // width: 680px !important;
            width: 100% !important;
 
-           @media (max-width: 920px)  {
+            @media (max-width: 770px)  {
                 width: 75% !important;
-            }
-            @media (max-width: 750px)  {
                 transform: initial !important; // Permet de stopper le parallaxe de la bannière 
+                animation: none;
             }
-
        }
     } 
 
@@ -45,7 +47,7 @@
         display: none;
         object-fit: cover;
 
-        @media (max-width: 920px)  {
+        @media (max-width: 770px)  {
             display: block;
         }
 
@@ -63,7 +65,7 @@
         width: 100%;
         height: 100%;
 
-        @media (max-width: 920px)  {
+        @media (max-width: 770px)  {
                 display: none;
         }
     }

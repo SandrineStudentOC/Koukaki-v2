@@ -21,6 +21,9 @@
 
 /* STYLE GENERAL */
 
+    body{
+    height: auto !important;
+    }
 
     .site-main {
         overflow: hidden;
@@ -29,6 +32,39 @@
     a:hover, a:focus, a:active {
         color: #000000;
     }
+
+/* FADE IN SECTIONS TEST */ 
+
+.animateSection {
+    opacity: 0;
+   // transform: translateY(200px);
+
+   @media (max-width: 770px)  {
+    opacity: 1;
+    }
+
+}
+
+.animateSection p {
+    opacity: 1;
+}
+
+.animateSection-visible {
+    animation: animateTop 2s both;
+    @media (max-width: 770px)  {
+        animation: none;
+        }
+
+}
+
+.animateSection-visible p {
+     animation: animateBottom 2s both;
+     @media (max-width: 770px)  {
+        animation: none;
+        }
+ }
+
+/* MEDIA QUERIES */
 
 @media (max-width: 700px){
     h2 {

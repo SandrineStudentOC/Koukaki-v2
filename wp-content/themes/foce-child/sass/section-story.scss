@@ -1,5 +1,6 @@
 /* FADE IN */
 
+/*
 .story {
    animation: animateTop 2s;
 
@@ -11,6 +12,20 @@
             animation: animateBottom 2s; // Permet d'annuler l'animation du texte
         }
 }
+*/
+
+ /* TEST
+ .animateSection {
+
+         &__article p {
+             animation: animateBottom 2s !important; // Permet d'annuler l'animation du texte
+         }
+ 
+         &__place p {
+             animation: animateBottom 2s; // Permet d'annuler l'animation du texte
+         }
+         
+    } */
 
 
 
