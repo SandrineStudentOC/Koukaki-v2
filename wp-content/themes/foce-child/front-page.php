@@ -5,7 +5,7 @@ get_header();
 
     <main id="primary" class="site-main">
     <section class="banner">
-            <!-- code ajouté / séparer logo du background pour animation -->
+            <!-- séparer logo du background pour animation -->
             <div class="banner__logo">
                 <img class="banner__logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"  data-0="transform:translateY(0px)" data-400="transform:translateY(190px)" >
             </div>

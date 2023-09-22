@@ -5,45 +5,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.nav__titre{
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.4em;
-}
+    @media (max-width: 500px)  {
+        justify-content:flex-start ;
+        font-size: 0.9em;
+    }
 
-.nav__titre a{
-    text-decoration: none;
-    
-}
+    @media (max-width: 400px)  {
+        justify-content:center ;
+        padding-left: 0px;
+    }
 
-.nav__liste {
-    position: fixed;
-    padding-top: 20px;
-    padding-left: 0px;
-    margin-left: 0px;
-    gap: 4%;
-    top: 80px;
-    background: #FFF5E9;
-    width: 100%;
-    max-width: 1440px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    //padding-bottom: 80px;
-    display: none;
-    overflow: hidden;
-    animation: animateBottom 1.2s;
-    z-index: -1;
-}
+    &__titre{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.4em;
 
-.animation_menu{
-    animation: animateTitre 1.5s ease-in-out 1s both;
-    display: block;
+        @media (max-width: 500px)  {
+            padding-left: 20px;
+        }
+
+        @media (max-width: 400px)  {
+            display: none;
+        }
+
+            a{
+                text-decoration: none;   
+            }
+    }
+
+    &__liste {
+        position: fixed;
+        padding-top: 20px;
+        padding-left: 0px;
+        margin-left: 0px;
+        gap: 4%;
+        top: 80px;
+        background: #FFF5E9;
+        width: 100%;
+        max-width: 1440px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        display: none;
+        overflow: hidden;
+        animation: animateBottom 1.2s ;
+        z-index: -1;
+    }
 }
 
 .nav__liste__story{
@@ -55,6 +66,10 @@
         left: -2em;
         top: 5em;
         animation: spin 20s linear infinite ;
+
+        @media (max-width: 500px)  {
+            display: none;
+        }
     }
     &::after{
         content: url(./assets/images/menu/Sunflower.png);
@@ -62,10 +77,13 @@
         width: 155px;
         height: 154px;
         right: 15%;
-        top: 10em;
+        top: 6em;
         animation: spin 20s linear infinite ;
-    }
 
+        @media (max-width: 750px)  {
+            display: none;
+       }
+    }
 }
 
 .nav__liste__characters{
@@ -75,44 +93,63 @@
         top: 12em;
         left: 21%;
         animation: floating 6s ease-in-out infinite;
+
+        @media (max-width: 900px)  {
+            display: none;
+        }
     }
+
     &::after{
         content: url(./assets/images/menu/cat_noir.png);
         position: absolute;
-        top: 32em;
+        top: 28em;
         right: 14%;
         animation: floating 6s ease-in-out infinite;
-    }
 
+        @media (max-width: 900px)  {
+            display: none;
+        }
+    }
 }
 
 .nav__liste__place{
     &::before{
         content: url(./assets/images/menu/Flower_petit.png);
         position: absolute;
-        top: 33em;
+        top: 30em;
         left: 15%;
         animation: spin 20s linear infinite ;
+
+        @media (max-width: 750px)  {
+            display: none;
+       }
     }
     &::after{
         content: url(./assets/images/menu/Random_Flower_petit.png);
         position: absolute;
         width: 75px;
         height: 75px;
-        top: 28em;
+        top: 25em;
         right: -2em;
         animation: spin 20s linear infinite ;
-    }
 
+        @media (max-width: 500px)  {
+            display: none;
+        }
+    }
 }
 
 .nav__liste__studio{
     &::before{
         content: url(./assets/images/menu/cat_orange.png);
         position: absolute;
-        top: 50em;
+        top: 44em;
         left: 5%;
         animation: floating 6s ease-in-out infinite;
+
+        @media (max-width: 750px)  {
+            display: none;
+        }
     }
     &::after{
         content: url(./assets/images/menu/Hibiscus_menu.png);
@@ -122,36 +159,35 @@
         top: 40em;
         right: -24em;
         animation: spin 20s linear infinite ;
+
+        @media (max-width: 750px)  {
+            display: none;
+       }
     }
-
 }
 
-
-
-.nav__liste li {
+.nav__liste > li {
     list-style: none;
-    
+    a{
+        text-decoration: none;
+        font-size: calc(1rem + 3.5vmin);
+        &:hover{
+            text-decoration: none;
+            text-shadow: #FF5C00 0 0 14px;
+            color: #000;
+        }
+        &:focus{
+            color: #000;
+        }
+        &:active{
+            color: #000;
+        }
+    }
 }
 
-.nav__liste li a{
-    text-decoration: none;
-    font-size: calc(1rem + 3.5vmin);
-}
-
-.nav__liste li a:hover{
-    text-decoration: none;
-   // font-size: 4rem;
-  // font-size: calc(1rem + 3vmin);
-    text-shadow: #FF5C00 0 0 14px;
-    color: #000;
-}
-
-.nav__liste li a:focus{
-    color: #000;
-}
-
-.nav__liste li a:active{
-    color: #000;
+.animation_menu{
+    animation: animateTitre 1.5s ease-in-out 1s both;
+    display: block;
 }
 
 .lien-koukaki{
@@ -165,90 +201,25 @@
     position: absolute;
     right: 9%;
     font-size: 30px;
-}
 
-#icons::before{
-    content: "\2630";
-}
-
-// Quand la classe "active" est ajoutée avec js , cela affiche la croix sur le menu
-
-.active #icons::before{
-    content: "\2715";
-}
-
-.active .nav__liste{
-    display: flex; // annule le display:none de <ul> et affiche le menu
-}
-
-/* MEDIA QUERIES */
-
-@media only screen and (max-width: 900px)  {
-  
-    .nav__liste__characters::before{
-        display: none;
-    }
-    .nav__liste__characters::after{
-        display: none;
-    }
-    .nav__liste__studio::after{
-        display: none;
-    }
-    .nav__liste__studio::before{
-        display: none;
-    } 
-}
-
-@media only screen and (max-width: 750px)  {
-  
-    .nav__liste__story::after {
-        display: none;
-    }
-    .nav__liste__studio::after {
-        display: none;
-    }
-    .nav__liste__place::before {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 500px)  {
-  
-    #myNav {
-
-        justify-content:flex-start ;
-        font-size: 0.9em;
-    }
-    .nav__titre{
-        padding-left: 20px;
-    }
-    .nav__liste__story::before {
-        display: none;
-    }
-    .nav__liste__place::after {
-        display: none;
+    &::before{
+        content: "\2630";
     }
 
-    .nav__liste__studio::before {
-        display: none;
-    }
-}
-
-
-@media only screen and (max-width: 400px)  {
-  
-    .nav__titre {
-        display: none;
-    }
-
-    #icons {
+    @media (max-width: 400px)  {
         position: static;
     }
+}
 
-    #myNav {
+// Quand la classe "active" est ajoutée avec js : 
 
-        justify-content:center ;
-        padding-left: 0px;
-
+.active {
+    .nav__liste{
+        display: flex; // annule le display:none de <ul> et affiche le menu
+    }
+    #icons{
+        &::before{
+            content: "\2715"; // affiche la croix
+        }
     }
 }

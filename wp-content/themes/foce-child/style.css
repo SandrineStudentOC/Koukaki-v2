@@ -82,17 +82,36 @@
   align-items: center;
   justify-content: center;
 }
-
+@media (max-width: 500px) {
+  .nav {
+    justify-content: flex-start;
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 400px) {
+  .nav {
+    justify-content: center;
+    padding-left: 0px;
+  }
+}
 .nav__titre {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.4em;
 }
-
+@media (max-width: 500px) {
+  .nav__titre {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .nav__titre {
+    display: none;
+  }
+}
 .nav__titre a {
   text-decoration: none;
 }
-
 .nav__liste {
   position: fixed;
   padding-top: 20px;
@@ -115,11 +134,6 @@
   z-index: -1;
 }
 
-.animation_menu {
-  animation: animateTitre 1.5s ease-in-out 1s both;
-  display: block;
-}
-
 .nav__liste__story::before {
   content: url(./assets/images/menu/orchid.png);
   position: absolute;
@@ -129,14 +143,24 @@
   top: 5em;
   animation: spin 20s linear infinite;
 }
+@media (max-width: 500px) {
+  .nav__liste__story::before {
+    display: none;
+  }
+}
 .nav__liste__story::after {
   content: url(./assets/images/menu/Sunflower.png);
   position: absolute;
   width: 155px;
   height: 154px;
   right: 15%;
-  top: 10em;
+  top: 6em;
   animation: spin 20s linear infinite;
+}
+@media (max-width: 750px) {
+  .nav__liste__story::after {
+    display: none;
+  }
 }
 
 .nav__liste__characters::before {
@@ -146,37 +170,62 @@
   left: 21%;
   animation: floating 6s ease-in-out infinite;
 }
+@media (max-width: 900px) {
+  .nav__liste__characters::before {
+    display: none;
+  }
+}
 .nav__liste__characters::after {
   content: url(./assets/images/menu/cat_noir.png);
   position: absolute;
-  top: 32em;
+  top: 28em;
   right: 14%;
   animation: floating 6s ease-in-out infinite;
+}
+@media (max-width: 900px) {
+  .nav__liste__characters::after {
+    display: none;
+  }
 }
 
 .nav__liste__place::before {
   content: url(./assets/images/menu/Flower_petit.png);
   position: absolute;
-  top: 33em;
+  top: 30em;
   left: 15%;
   animation: spin 20s linear infinite;
+}
+@media (max-width: 750px) {
+  .nav__liste__place::before {
+    display: none;
+  }
 }
 .nav__liste__place::after {
   content: url(./assets/images/menu/Random_Flower_petit.png);
   position: absolute;
   width: 75px;
   height: 75px;
-  top: 28em;
+  top: 25em;
   right: -2em;
   animation: spin 20s linear infinite;
+}
+@media (max-width: 500px) {
+  .nav__liste__place::after {
+    display: none;
+  }
 }
 
 .nav__liste__studio::before {
   content: url(./assets/images/menu/cat_orange.png);
   position: absolute;
-  top: 50em;
+  top: 44em;
   left: 5%;
   animation: floating 6s ease-in-out infinite;
+}
+@media (max-width: 750px) {
+  .nav__liste__studio::before {
+    display: none;
+  }
 }
 .nav__liste__studio::after {
   content: url(./assets/images/menu/Hibiscus_menu.png);
@@ -187,28 +236,34 @@
   right: -24em;
   animation: spin 20s linear infinite;
 }
-
-.nav__liste li {
-  list-style: none;
+@media (max-width: 750px) {
+  .nav__liste__studio::after {
+    display: none;
+  }
 }
 
-.nav__liste li a {
+.nav__liste > li {
+  list-style: none;
+}
+.nav__liste > li a {
   text-decoration: none;
   font-size: calc(1rem + 3.5vmin);
 }
-
-.nav__liste li a:hover {
+.nav__liste > li a:hover {
   text-decoration: none;
   text-shadow: #FF5C00 0 0 14px;
   color: #000;
 }
-
-.nav__liste li a:focus {
+.nav__liste > li a:focus {
+  color: #000;
+}
+.nav__liste > li a:active {
   color: #000;
 }
 
-.nav__liste li a:active {
-  color: #000;
+.animation_menu {
+  animation: animateTitre 1.5s ease-in-out 1s both;
+  display: block;
 }
 
 .lien-koukaki {
@@ -223,79 +278,36 @@
   right: 9%;
   font-size: 30px;
 }
-
 #icons::before {
   content: "☰";
 }
-
-.active #icons::before {
-  content: "✕";
+@media (max-width: 400px) {
+  #icons {
+    position: static;
+  }
 }
 
 .active .nav__liste {
   display: flex;
 }
+.active #icons::before {
+  content: "✕";
+}
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
-  .nav__liste__characters::before {
-    display: none;
-  }
-  .nav__liste__characters::after {
-    display: none;
-  }
-  .nav__liste__studio::after {
-    display: none;
-  }
-  .nav__liste__studio::before {
-    display: none;
-  }
-}
-@media only screen and (max-width: 750px) {
-  .nav__liste__story::after {
-    display: none;
-  }
-  .nav__liste__studio::after {
-    display: none;
-  }
-  .nav__liste__place::before {
-    display: none;
-  }
-}
-@media only screen and (max-width: 500px) {
-  #myNav {
-    justify-content: flex-start;
-    font-size: 0.9em;
-  }
-  .nav__titre {
-    padding-left: 20px;
-  }
-  .nav__liste__story::before {
-    display: none;
-  }
-  .nav__liste__place::after {
-    display: none;
-  }
-  .nav__liste__studio::before {
-    display: none;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .nav__titre {
-    display: none;
-  }
-  #icons {
-    position: static;
-  }
-  #myNav {
-    justify-content: center;
-    padding-left: 0px;
-  }
-}
 /* FADE IN + LOGO FLOTTEMENT*/
 .banner {
   background-image: none;
   position: relative;
+}
+@media (max-width: 700px) {
+  .banner {
+    min-height: 550px;
+  }
+}
+@media (max-width: 450px) {
+  .banner {
+    min-height: 350px;
+  }
 }
 .banner__logo {
   margin-top: 0 !important;
@@ -308,6 +320,16 @@
 .banner__logo__img {
   width: 100% !important;
 }
+@media (max-width: 920px) {
+  .banner__logo__img {
+    width: 75% !important;
+  }
+}
+@media (max-width: 750px) {
+  .banner__logo__img {
+    transform: initial !important;
+  }
+}
 .banner__background {
   position: absolute;
   width: 100% !important;
@@ -317,6 +339,11 @@
   margin-top: 0px !important;
   display: none;
   object-fit: cover;
+}
+@media (max-width: 920px) {
+  .banner__background {
+    display: block;
+  }
 }
 .banner__video {
   animation: animateBottom 2s;
@@ -330,52 +357,26 @@
   width: 100%;
   height: 100%;
 }
-
-.animation-logo {
-  animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite;
-}
-
-/* MEDIA QUERIES */
-@media only screen and (max-width: 920px) {
+@media (max-width: 920px) {
   .banner__video {
     display: none;
   }
-  .banner__background {
-    display: block;
-  }
-  .banner__logo__img {
-    width: 85% !important;
-  }
 }
-@media only screen and (max-width: 750px) {
-  .banner__logo__img {
-    transform: initial !important;
-  }
-}
-/*
-@media only screen and (max-width: 400px)  {
 
-    .banner{
-        min-height: 500px;
-    }
-
-}
-*/
 /* FADE IN */
 .story {
   animation: animateTop 2s;
 }
 .story__article p {
-  animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+  animation: animateBottom 2s;
 }
 .story__place p {
-  animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+  animation: animateBottom 2s;
 }
 
 /* ROTATION FLEURS */
 .story__titre::after {
   animation: spin var(--rotation) linear infinite;
-  /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
   width: 155px;
   height: 154px;
 }
@@ -400,24 +401,24 @@
   flex-direction: column;
   text-align: center;
 }
-
-.swiper-container {
+.story #character h3 {
+  background-image: url(./assets/images/orange_characters_bg.png);
+}
+.story #character .swiper-container {
   max-width: 1440px;
   width: 100%;
   padding-top: 50px;
+}
+@media (max-width: 780px) {
+  .story #character .swiper-container {
+    max-width: 900px;
+  }
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
 }
-
-/*
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
-*/
 .swiper-slide h4 {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
@@ -425,23 +426,9 @@
   margin-top: 0;
 }
 
-.story #character h3 {
-  background-image: url(./assets/images/orange_characters_bg.png);
-}
-
-@media only screen and (max-width: 780px) {
-  .swiper-container {
-    max-width: 900px;
-  }
-}
 /* FADE IN ET ROTATION DES FLEURS */
 .studio {
   animation: animateTop 2s;
-}
-.studio__titre {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 .studio__titre::before {
   animation: spin var(--rotation) linear infinite;
@@ -466,11 +453,10 @@
   animation: animateTitre 1s ease-in-out both;
 }
 
-#place {
+.story__place {
   background-image: url(./assets/images/Studio_Koukaki-image_place.png) !important;
   position: relative;
 }
-
 .story__place__big-cloud {
   filter: blur(0.8rem);
   position: absolute;
@@ -489,8 +475,14 @@
   justify-content: space-between;
   align-items: center;
   width: 75%;
-  /*  margin: auto;*/
   margin-left: 11em;
+}
+@media (max-width: 1130px) {
+  .oscars {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .oscars__titre {
   background-image: url(./assets/images/orange_oscars_bg.png);
@@ -501,19 +493,13 @@
   line-height: 150%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2588235294);
 }
-
-/* MEDIA QUERIES */
-@media only screen and (max-width: 1130px) {
-  .oscars {
-    flex-direction: column;
-    width: 100%;
-    margin-left: 0;
-  }
-  .oscars .oscars__titre {
+@media (max-width: 1130px) {
+  .oscars__titre {
     font-size: calc(0.6rem + 1.9vw);
     line-height: 150%;
   }
 }
+
 .site-footer::before {
   animation: spin var(--rotation) linear infinite;
   width: 155px;

@@ -4,9 +4,6 @@
     animation: animateTop 2s;
 
     &__titre{
-        display: flex; //test
-        flex-direction: row; //test
-        justify-content: center; //test
         &::before{
             animation: spin var(--rotation) linear infinite ;
             width: 203px;
@@ -22,7 +19,6 @@
     &__texte p {
      animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
     }
- 
 } 
 
 /* FADE IN TITRE H2 AU SCROLL */

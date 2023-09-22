@@ -4,11 +4,11 @@
    animation: animateTop 2s;
 
         &__article p {
-            animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+            animation: animateBottom 2s; // Permet d'annuler l'animation du texte
         }
 
         &__place p {
-            animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+            animation: animateBottom 2s; // Permet d'annuler l'animation du texte
         }
 }
 
@@ -20,7 +20,7 @@
         &__titre{
             &::after{
                 animation: spin var(--rotation) linear  infinite ; // ajout d'une variable pour modifier la vitesse de rotation au scroll en js
-                /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
+                // donner la L et H exact de la fleur pour que la rotation soit bien centrée
                 width: 155px;
                 height: 154px;
             }
