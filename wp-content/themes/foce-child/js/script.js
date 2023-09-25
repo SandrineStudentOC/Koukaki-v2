@@ -1,28 +1,30 @@
-
-
 // FADE IN TITRES
 
-// on crée l'observer pour titre histoire
+// On crée l'observer pour le titre "histoire"
 const observerStorytitle = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const titre = entry.target.querySelector('.story-span')
 
+        // Ajoute la classe d'animation si l'élément est visible
         if (entry.isIntersecting ) { 
             titre.classList.add ('story-span__animation');
             return;
         }
+
+        // Retire la classe d'animation si l'élément n'est pas visible
         titre.classList.remove('story-span__animation')
     }); 
 
 },{
-    threshold: 0.9
+    threshold: 0.9 // Seuil de visibilité pour déclencher l'animation
 }
 );
 
+// Observe l'élément "histoire"
 observerStorytitle.observe(document.querySelector(".story__titre"));
 
 
-// on crée l'observer pour titre studio
+// On crée l'observer pour le titre "studio"
 const observerStudio = new IntersectionObserver(entries => {
   entries.forEach(entry => {
       const titre = entry.target.querySelector('.studio-span')
@@ -43,28 +45,35 @@ observerStudio.observe(document.querySelector(".studio__titre"));
 
 // FADE IN SECTIONS
 
-// on crée l'observer pour section story et studio
+// On crée l'observer pour les sections "story" et "studio"
 
-const ratio = .15
+const ratio = 0.15; // Ratio de visibilité pour déclencher l'animation
+
+// Options pour l'IntersectionObserver
 const options = {
   root: null,
   rootMargin: '0px' ,
   threshold: ratio
-}
+};
 
-const handleIntersect = function (entries, observer) {
-  entries.forEach(function (entry) {
+// Fonction appelée lorsqu'une section est visible
+const handleIntersect = (entries, observer) => {
+  entries.forEach(entry => {
     if (entry.intersectionRatio > ratio) {
-      entry.target.classList.add ('animateSection-visible')
-      observer.unobserve(entry.target)
+      // Ajoute la classe d'animation si la section est visible
+      entry.target.classList.add ('animateSection-visible'); 
+      observer.unobserve(entry.target);// Arrête l'observation pour cette section
     }
-  })
-}
+  });
+};
 
-const observer = new IntersectionObserver (handleIntersect, options)
-document.querySelectorAll('.animateSection').forEach(function (r) {
-  observer.observe(r)
-})
+// Création de l'IntersectionObserver pour les sections
+const observer = new IntersectionObserver (handleIntersect, options); 
+
+// Observer toutes les sections avec la classe 'animateSection'
+document.querySelectorAll('.animateSection').forEach(element => {
+  observer.observe(element);
+});
 
 
 // accélération des fleurs au scroll
@@ -75,32 +84,23 @@ let isScrolling = false;
 window.addEventListener("scroll", () => {
   if (!isScrolling) {
     isScrolling = true;
+     // Change la propriété de rotation au scroll
     root.style.setProperty("--rotation", "5s");
     
     setTimeout(() => {
       isScrolling = false;
+      // Rétablit la propriété de rotation après un délai
       root.style.setProperty("--rotation", "20s");
-    }, 600);
+    }, 300);
   }
 });
 
-/*
-const element = document.querySelector('.story__titre::after'); // Sélectionne l'élément animé
-
-window.addEventListener('scroll', function() {
-  const scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Calcule le pourcentage de défilement
-
-  const animationSpeed = 5 - scroll * 4; // Ajuste la vitesse de l'animation en fonction du défilement
-
-  element.style.animationDuration = `${animationSpeed}s`; // Applique la nouvelle durée de l'animation
-});
-*/
 
 // Slide Swiper Coverflow
 
 const swiper = new Swiper(".swiper-container", {
-  centeredSlides: true,
   effect: "coverflow",
+  centeredSlides: true,
    grabCursor: true,
   slidesPerView: 3,
   coverflowEffect: {
@@ -111,7 +111,7 @@ const swiper = new Swiper(".swiper-container", {
     slideShadows: false,
   },
    autoplay: {
-   delay: 500,
+   delay: 2000,
   },
   loop: true,
 });
@@ -119,15 +119,20 @@ const swiper = new Swiper(".swiper-container", {
 
 // Ouverture du menu burger au clic sur la croix
 
+// Sélectionne l'élément du menu et tous les liens dans le menu
 const navMenu = document.querySelector(".nav");
 const links = document.querySelectorAll(".nav__liste li");
 
+// Gestionnaire d'événement pour le clic sur l'icône (burger)
 icons.addEventListener("click",()=> {
+  // Active/désactive la classe "active" sur le menu au clic
   navMenu.classList.toggle("active");
 });
 
+// Gestionnaire d'événement pour le clic sur un lien dans le menu
 links.forEach((link) => {
   link.addEventListener("click", () => {
+    // Désactive la classe "active" sur le menu au clic sur un lien
     navMenu.classList.remove("active");
   });
 });

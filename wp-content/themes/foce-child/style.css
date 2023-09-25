@@ -74,6 +74,7 @@
     opacity: 1;
   }
 }
+/* MIXINS */
 .nav {
   height: 80px;
   background-color: #FFD5A2;
@@ -365,32 +366,6 @@
   }
 }
 
-/* FADE IN */
-/*
-.story {
-   animation: animateTop 2s;
-
-        &__article p {
-            animation: animateBottom 2s; // Permet d'annuler l'animation du texte
-        }
-
-        &__place p {
-            animation: animateBottom 2s; // Permet d'annuler l'animation du texte
-        }
-}
-*/
-/* TEST
-.animateSection {
-
-        &__article p {
-            animation: animateBottom 2s !important; // Permet d'annuler l'animation du texte
-        }
-
-        &__place p {
-            animation: animateBottom 2s; // Permet d'annuler l'animation du texte
-        }
-
-   } */
 /* ROTATION FLEURS */
 .story__titre::after {
   animation: spin var(--rotation) linear infinite;
@@ -444,11 +419,6 @@
 }
 
 /* FADE IN ET ROTATION DES FLEURS */
-.studio {
-  /*  &__texte p {
-     animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte
-    }*/
-}
 .studio__titre::before {
   animation: spin var(--rotation) linear infinite;
   width: 203px;
@@ -536,6 +506,21 @@
 body {
   height: auto !important;
 }
+@media (max-width: 700px) {
+  body h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 400px) {
+  body h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  body h3 {
+    font-size: 2rem;
+  }
+}
 
 .site-main {
   overflow: hidden;
@@ -545,7 +530,7 @@ a:hover, a:focus, a:active {
   color: #000000;
 }
 
-/* FADE IN SECTIONS TEST */
+/* FADE IN SECTIONS */
 .animateSection {
   opacity: 0;
 }
@@ -560,7 +545,7 @@ a:hover, a:focus, a:active {
 }
 
 .animateSection-visible {
-  animation: animateTop 2s both;
+  animation: animateTop 3s both;
 }
 @media (max-width: 770px) {
   .animateSection-visible {
@@ -569,26 +554,11 @@ a:hover, a:focus, a:active {
 }
 
 .animateSection-visible p {
-  animation: animateBottom 2s both;
+  animation: animateBottom 3s both;
 }
 @media (max-width: 770px) {
   .animateSection-visible p {
     animation: none;
-  }
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  h2 {
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 400px) {
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 2rem;
   }
 }
 

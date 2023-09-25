@@ -78,3 +78,17 @@
         opacity: 1;
     }
  }
+
+/* MIXINS */
+
+@mixin flower-animation{
+    animation: spin var(--rotation) linear infinite ; // ajout d'une variable pour modifier la vitesse de rotation au scroll en js
+}
+
+@mixin flower-animation-menu{
+    animation: spin 20s linear infinite ;
+}
+
+@mixin cat-animation{
+    animation: floating 6s ease-in-out infinite;
+}

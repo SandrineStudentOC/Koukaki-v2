@@ -1,21 +1,20 @@
-
+ 
     .site-footer{
         &::before {
-            animation: spin var(--rotation) linear infinite ;
+            @include flower-animation;
             width: 155px;
             height: 154px;
         }
         &::after {
-            animation: spin var(--rotation) linear infinite ;
+            @include flower-animation;
             width: 173px;
             height: 169px;
         }
             &__liste{
                 &::after{
-                animation: spin var(--rotation) linear infinite ;
+                @include flower-animation;
                 width: 646px;
                 height: 646px;
                 }
             }
-        
       }

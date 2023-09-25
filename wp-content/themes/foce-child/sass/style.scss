@@ -8,7 +8,7 @@
  Version: 0.1
  */
 
-@import "keyframes.scss";
+@import "keyframes-mixins.scss";
 @import "section-header.scss";
 @import "section-banner.scss";
 @import "section-story.scss";
@@ -23,6 +23,19 @@
 
     body{
     height: auto !important;
+        h2{
+            @media (max-width: 700px){
+                font-size: 2.5rem;
+            }
+            @media (max-width: 400px){
+                font-size: 2rem;
+            }
+        }
+        h3{
+            @media (max-width: 400px){
+                    font-size: 2rem;
+                }
+        }
     }
 
     .site-main {
@@ -33,52 +46,32 @@
         color: #000000;
     }
 
-/* FADE IN SECTIONS TEST */ 
+/* FADE IN SECTIONS */ 
 
 .animateSection {
     opacity: 0;
-   // transform: translateY(200px);
 
-   @media (max-width: 770px)  {
+    @media (max-width: 770px)  {
     opacity: 1;
     }
-
 }
 
 .animateSection p {
-    opacity: 1;
+    opacity: 1; // permet de ne pas animer les paragraphes
 }
 
 .animateSection-visible {
-    animation: animateTop 2s both;
+    animation: animateTop 3s both;
+
     @media (max-width: 770px)  {
         animation: none;
         }
-
 }
 
 .animateSection-visible p {
-     animation: animateBottom 2s both;
+     animation: animateBottom 3s both; // permet de ne pas animer les paragraphes
+     
      @media (max-width: 770px)  {
         animation: none;
         }
  }
-
-/* MEDIA QUERIES */
-
-@media (max-width: 700px){
-    h2 {
-    font-size: 2.5rem;
-    }
-
-}
-
-@media (max-width: 400px){
-    h2 {
-    font-size: 2rem;
-    }
-    h3 {
-        font-size: 2rem;
-    }
-    
-}

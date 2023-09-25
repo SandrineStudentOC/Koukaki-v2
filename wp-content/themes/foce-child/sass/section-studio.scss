@@ -1,24 +1,18 @@
 /* FADE IN ET ROTATION DES FLEURS */
 
 .studio {
-  //  animation: animateTop 2s;
-
     &__titre{
         &::before{
-            animation: spin var(--rotation) linear infinite ;
+            @include flower-animation;
             width: 203px;
             height: 199px;
         }
         &::after{
-            animation: spin var(--rotation) linear infinite ;
+            @include flower-animation;
             width: 109px;
             height: 109px;
         }
     }
- 
-  /*  &__texte p {
-     animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte
-    }*/
 } 
 
 /* FADE IN TITRE H2 AU SCROLL */
