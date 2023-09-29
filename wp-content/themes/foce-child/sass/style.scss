@@ -61,7 +61,7 @@
 }
 
 .animateSection-visible {
-    animation: animateTop 3s both;
+    animation: animateTop 2s both;
 
     @media (max-width: 770px)  {
         animation: none;
@@ -69,7 +69,7 @@
 }
 
 .animateSection-visible p {
-     animation: animateBottom 3s both; // permet de ne pas animer les paragraphes
+     animation: animateBottom 2s both; // permet de ne pas animer les paragraphes
      
      @media (max-width: 770px)  {
         animation: none;

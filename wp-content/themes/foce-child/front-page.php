@@ -34,7 +34,7 @@ get_header();
 
 
         <section id="studio" class="studio animateSection">
-            <h2 class="studio__titre"><span class="studio-span">Studio Koukaki</span></h2>
+            <h2 class="studio__titre"><span class="studio-span">Studio</span> <span class="studio-span">Koukaki</span></h2>
             <div class="studio__texte">
                 <!-- Ajout classe p -->
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>

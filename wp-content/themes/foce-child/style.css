@@ -432,11 +432,14 @@
 
 /* FADE IN TITRE H2 AU SCROLL */
 .studio-span {
-  display: block;
+  display: inline-block;
   opacity: 0;
 }
 .studio-span__animation {
-  animation: animateTitre 1s ease-in-out both;
+  animation: animateTitre 0.5s ease-in-out both;
+}
+.studio-span:nth-child(2) {
+  animation-delay: 0.3s;
 }
 
 .story__place {
@@ -545,7 +548,7 @@ a:hover, a:focus, a:active {
 }
 
 .animateSection-visible {
-  animation: animateTop 3s both;
+  animation: animateTop 2s both;
 }
 @media (max-width: 770px) {
   .animateSection-visible {
@@ -554,7 +557,7 @@ a:hover, a:focus, a:active {
 }
 
 .animateSection-visible p {
-  animation: animateBottom 3s both;
+  animation: animateBottom 2s both;
 }
 @media (max-width: 770px) {
   .animateSection-visible p {

@@ -18,9 +18,12 @@
 /* FADE IN TITRE H2 AU SCROLL */
 
 .studio-span{
-    display: block; // Permet d'appliquer l'animation au span
+    display: inline-block; // Permet d'appliquer l'animation au span
     opacity: 0;
     &__animation{
-        animation: animateTitre 1s ease-in-out both;
+        animation: animateTitre 0.5s ease-in-out both;
+    }
+    &:nth-child(2){ 
+        animation-delay: 0.3s; // Délai pour démarrer l'animation pour le deuxième mot 
     }
  }

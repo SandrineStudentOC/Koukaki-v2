@@ -24,19 +24,22 @@ const observerStorytitle = new IntersectionObserver(entries => {
 observerStorytitle.observe(document.querySelector(".story__titre"));
 
 
-// On crée l'observer pour le titre "studio"
+// On crée l'observer pour le titre "studio koukaki"
 const observerStudio = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-      const titre = entry.target.querySelector('.studio-span')
+    const titres = entry.target.querySelectorAll('.studio-span');
 
-      if (entry.isIntersecting ) { 
-          titre.classList.add ('studio-span__animation');
-          return;
-      }
-      titre.classList.remove('studio-span__animation')
-  }); 
-
-},{
+    if (entry.isIntersecting) {
+      titres.forEach(titre => {
+        titre.classList.add('studio-span__animation');
+      });
+    } else {
+      titres.forEach(titre => {
+        titre.classList.remove('studio-span__animation');
+      });
+    }
+  });
+}, {
   threshold: 0.9
 }
 );
